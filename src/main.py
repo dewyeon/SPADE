@@ -39,7 +39,7 @@ def parse_args():
     parser.add_argument('-cl_indexes', '--class_indexes', default='0,1,2,3,4,5,6,7,8,9,10,11,12,13,14', type=str, metavar='C',
 						help='class indexes for multi_MVTec (0~14) (default: 4,5)')
     parser.add_argument('--gpu', type=str, default='0')
-    parser.add_argument('--user', '-usr', type=str, default='juyeon')
+    parser.add_argument('--user', '-usr', type=str, default='ubuntu')
     parser.add_argument('--backbone', '-bb', type=str, default='resnet18', help='resnet18 / wideresnet')
 
     return parser.parse_args()
@@ -62,6 +62,8 @@ def main():
         args.data_path = '/home/sojin/dataset/mvtec'
     elif args.user == 'juyeon':
         args.data_path = '/home/juyeon/data/mvtec'
+    elif args.user == 'ubuntu':
+        args.data_path = '/home/ubuntu/sojin/dataset/mvtec'
     elif args.user == 'kakao':
         args.data_path = '/root/dataset/mvtec'
     else:
